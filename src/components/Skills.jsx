@@ -46,7 +46,7 @@ function SkillsGrid() {
     <Container>
       <Row className="gap-3">
         {skills.map((skill) => (
-          <SkillItem {...skill} />
+          <SkillItem key={skill.name} {...skill} />
         ))}
       </Row>
     </Container>

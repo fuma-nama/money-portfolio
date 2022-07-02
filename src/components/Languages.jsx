@@ -65,7 +65,7 @@ export default function Languages() {
         className="owl-carousel owl-theme skill-slider"
       >
         {languages.map((lang) => (
-          <Item {...lang} />
+          <Item key={lang.name} {...lang} />
         ))}
       </Carousel>
     </Container>

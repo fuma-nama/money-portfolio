@@ -54,7 +54,7 @@ function ProjectsGrid() {
     <Container>
       <Row className="gap-3">
         {projects.map((project) => (
-          <Project {...project} />
+          <Project key={project.name} {...project} />
         ))}
       </Row>
     </Container>

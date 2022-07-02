@@ -15,7 +15,7 @@ function App() {
   return (
     <div>
       <AppNav />
-      <AnimationOnScroll animateIn="animate__fadeIn">
+      <AnimationOnScroll animateIn="animate__fadeIn" initiallyVisible>
         <Introduce />
       </AnimationOnScroll>
       <AnimationOnScroll animateIn="animate__fadeInUp">
