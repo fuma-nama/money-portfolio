@@ -4,15 +4,12 @@
 }
 
 .navbar {
-  @apply sticky top-0 z-50 mb-5;
+  background-color: transparent !important;
+  @apply sticky top-0 z-50 mb-5 bg-gradient-to-b from-primary-bg via-primary-bg to-transparent overflow-x-auto;
 }
 
 .react-multiple-carousel__arrow {
-  @apply z-10;
-}
-
-.navbar {
-  background-color: var(--primary-bg);
+  z-index: 10 !important;
 }
 
 span {
@@ -35,7 +32,7 @@ button:hover {
   @apply bg-transparent ring-primary-color text-primary-color ring-4;
 }
 
-.bg-dark {
+#root {
   background-color: var(--primary-bg);
 }
 
