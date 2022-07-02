@@ -63,7 +63,7 @@ function Profile() {
       <Col>
         <img className="contact-icon" src="img/discord.svg" alt="Discord" />
       </Col>
-      <Col xs={8}>
+      <Col md="auto">
         <h2>{name}</h2>
         <p>Contact Me on Discord</p>
         <button onClick={onCopy}>
