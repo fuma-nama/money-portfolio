@@ -9,16 +9,27 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import UrlBar from "./components/UrlBar";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 function App() {
   return (
     <div>
       <AppNav />
-      <Introduce />
-      <Skills />
-      <Languages />
-      <Projects />
-      <Contact />
+      <AnimationOnScroll animateIn="animate__fadeIn">
+        <Introduce />
+      </AnimationOnScroll>
+      <AnimationOnScroll animateIn="animate__fadeInUp">
+        <Skills />
+      </AnimationOnScroll>
+      <AnimationOnScroll animateIn="animate__fadeInUp">
+        <Languages />
+      </AnimationOnScroll>
+      <AnimationOnScroll animateIn="animate__fadeIn">
+        <Projects />
+      </AnimationOnScroll>
+      <AnimationOnScroll animateIn="animate__bounceIn">
+        <Contact />
+      </AnimationOnScroll>
       <Footer />
     </div>
   );
@@ -58,16 +69,14 @@ function Introduce() {
               Now also learnt 3d modeling, After Effects, Photoshop and Drawn my
               avatars myself.
             </p>
-            <button onClick={() => console.log("connect")}>
-              Let’s Connect <ArrowRightCircle size={25} />
-            </button>
+            <a href="#contact">
+              <button>
+                Let’s Connect <ArrowRightCircle size={25} />
+              </button>
+            </a>
           </Col>
           <Col xs={12} md={6} xl={5} className="p-4">
-            <img
-              src="img/logo.jpg"
-              alt="Header Img"
-              className="logo animate__animated animate__pulse animate__infinite animate__slow"
-            />
+            <img src="img/logo.jpg" alt="Header Img" className="logo" />
           </Col>
         </Row>
       </Container>

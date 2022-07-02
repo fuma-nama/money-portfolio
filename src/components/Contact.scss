@@ -13,6 +13,8 @@
 }
 
 .contact-container {
+  animation: updown 3s infinite;
+
   @apply bg-white text-black rounded-xl p-5 gap-4;
 
   button {

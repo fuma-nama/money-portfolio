@@ -11,8 +11,7 @@ const projects = [
   {
     img: "img/projects/yeecord.png",
     name: "Yeecord HomePage",
-    description:
-      "The Home Page of popular discord bot Yeecord (Not owner of the bot)",
+    description: "The Home Page of popular discord bot Yeecord",
   },
   {
     img: "img/projects/todo.svg",
@@ -25,13 +24,6 @@ const projects = [
     description:
       "A full-featured Chat App with a java-only frontend and backend server",
   },
-  /*
-  {
-    img: "img/projects/blackface.jpg",
-    name: "Project BlackFace",
-    description: "A reverse engineering project to mod a unity game",
-  },
-  */
 ];
 
 export default function Projects() {
@@ -39,9 +31,11 @@ export default function Projects() {
     <Container className="project-container">
       <h1 className="primary-text">Projects</h1>
       <p>I did many cool projects for different peoples, communities</p>
-      <button>
-        Learn More <ArrowRightCircleFill size={25} />
-      </button>
+      <a href="https://github.com/SonMooSans">
+        <button>
+          Learn More <ArrowRightCircleFill size={25} />
+        </button>
+      </a>
       <Row className="project-wrapper">
         <Col md="auto" className="arrow-col">
           <ArrowReturnRight className="arrow" size={200} />
@@ -69,7 +63,7 @@ function ProjectsGrid() {
 
 function Project({ img, name, description }) {
   return (
-    <Col className="project">
+    <Col className="project grid-item">
       <img src={img} alt={name} />
       <h3>{name}</h3>
       <p>{description}</p>

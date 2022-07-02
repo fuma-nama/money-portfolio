@@ -15,19 +15,7 @@
 }
 
 .skill-item {
-  @apply flex flex-col text-center border-primary-color border-4 rounded-xl transition-all;
-
-  .primary-text {
-    @apply transition-colors;
-  }
-
-  &:hover {
-    @apply scale-110 bg-primary-color text-primary-bg;
-
-    .primary-text {
-      @apply text-primary-bg;
-    }
-  }
+  @apply flex flex-col text-center rounded-xl;
 }
 
 @media (max-width: 1200px) {

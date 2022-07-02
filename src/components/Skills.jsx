@@ -46,9 +46,7 @@ function SkillsGrid() {
     <Container>
       <Row className="gap-3">
         {skills.map((skill) => (
-          <Col sm className="skill-item">
-            <SkillItem {...skill} />
-          </Col>
+          <SkillItem {...skill} />
         ))}
       </Row>
     </Container>
@@ -57,9 +55,9 @@ function SkillsGrid() {
 
 function SkillItem({ years, name }) {
   return (
-    <>
+    <Col sm className="skill-item grid-item">
       <h3 className="primary-text">{`${years} Years`}</h3>
       <p>{name}</p>
-    </>
+    </Col>
   );
 }

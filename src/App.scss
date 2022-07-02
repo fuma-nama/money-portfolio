@@ -1,6 +1,6 @@
 .logo {
-  width: 100%;
-  border-radius: 3rem;
+  animation: updown 5s infinite;
+  @apply w-full rounded-xl;
 }
 
 .navbar {
@@ -10,6 +10,22 @@
 
 .react-multiple-carousel__arrow {
   z-index: 10 !important;
+}
+
+.grid-item {
+  @apply border-primary-color border-4 transition-all;
+
+  .primary-text {
+    @apply transition-colors;
+  }
+
+  &:hover {
+    @apply scale-105 bg-primary-color text-primary-bg;
+
+    .primary-text {
+      @apply text-primary-bg;
+    }
+  }
 }
 
 span {
@@ -26,10 +42,10 @@ p {
 
 button {
   @apply inline-flex items-center bg-primary-color text-primary-bg font-bold transition-all rounded-lg border-0 p-5 mt-3 gap-3;
-}
 
-button:hover {
-  @apply bg-transparent ring-primary-color text-primary-color ring-4;
+  &:hover {
+    @apply bg-transparent ring-primary-color text-primary-color ring-4;
+  }
 }
 
 #root {
@@ -40,26 +56,33 @@ button:hover {
   margin: auto;
   padding: 7rem 0 5rem 0;
   max-width: none;
-}
+  @apply relative;
 
-.banner,
-.banner > * {
-  position: relative;
-}
+  > * {
+    @apply relative;
+  }
 
-.banner::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(transparent, var(--primary-bg)),
-    url("img/banner.svg");
+  &:before {
+    content: "";
+    background: linear-gradient(transparent, var(--primary-bg)),
+      url("img/banner.svg");
 
-  background-size: cover;
+    @apply absolute left-0 top-0 w-full h-full bg-cover;
+  }
 }
 
 .tagline {
   @apply rounded-lg font-bold bg-gradient-to-br from-primary-color to-blue-900 px-4 py-2;
+}
+
+@keyframes updown {
+  from {
+    transform: translateY(1rem);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  to {
+    transform: translateY(1rem);
+  }
 }

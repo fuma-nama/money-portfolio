@@ -59,7 +59,9 @@ export default function Languages() {
 
       <Carousel
         responsive={responsive}
-        infinite={true}
+        infinite
+        autoPlay
+        autoPlaySpeed={1000}
         className="owl-carousel owl-theme skill-slider"
       >
         {languages.map((lang) => (

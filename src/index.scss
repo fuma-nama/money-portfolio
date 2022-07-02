@@ -12,6 +12,11 @@
 html {
   font-size: 1.4rem;
   user-select: none;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 img {
