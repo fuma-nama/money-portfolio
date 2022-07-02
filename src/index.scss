@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
+@import "../node_modules/bootstrap-darkmode/scss/darktheme";
+
+:root {
+  --primary-bg: #101214;
+  --primary-color: rgb(122, 208, 234);
+}
+
+html {
+  font-size: 1.4rem;
+  user-select: none;
+}
+
+img {
+  pointer-events: none;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+}

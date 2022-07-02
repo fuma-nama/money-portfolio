@@ -1,0 +1,17 @@
+.lang-bg {
+  background-image: linear-gradient(to bottom, transparent, var(--primary-bg)),
+    url(/img/world.svg);
+  @apply p-14 text-center mt-14;
+}
+
+.item {
+  @apply flex flex-col items-center p-5 gap-4;
+
+  > img {
+    @apply w-full max-w-lg rounded-xl;
+  }
+}
+
+.skill-slider {
+  @apply mt-14;
+}

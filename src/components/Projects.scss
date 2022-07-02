@@ -1,0 +1,33 @@
+.project-container {
+  @apply mt-20;
+}
+
+.arrow {
+  @apply w-full h-max;
+}
+
+.arrow-col {
+  @apply text-center;
+}
+
+.project {
+  @apply flex flex-col min-w-[12rem] text-center items-center justify-center border-4 border-primary-color rounded-xl p-4;
+
+  > img {
+    @apply w-full max-w-[18rem] flex-1 rounded-xl object-cover;
+  }
+}
+
+.project-wrapper {
+  @apply mt-2;
+}
+
+@media (max-width: 1000px) {
+  .arrow-col {
+    @apply hidden;
+  }
+
+  .project-wrapper {
+    @apply mt-5;
+  }
+}

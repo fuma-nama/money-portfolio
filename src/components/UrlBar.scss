@@ -1,0 +1,7 @@
+.social-icons {
+  @apply flex flex-row gap-4;
+
+  a {
+    @apply text-primary-color;
+  }
+}

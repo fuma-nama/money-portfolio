@@ -1,0 +1,47 @@
+.skills-bg {
+  @apply pl-10 py-10 relative;
+
+  > * {
+    @apply relative;
+  }
+
+  &:before {
+    content: "";
+
+    background-image: linear-gradient(to right, transparent, var(--primary-bg)),
+      url(/img/skills-bg.svg);
+    @apply absolute w-full h-full top-0 left-0 rounded-2xl opacity-70;
+  }
+}
+
+.skill-item {
+  @apply flex flex-col text-center border-primary-color border-4 rounded-xl transition-all;
+
+  .primary-text {
+    @apply transition-colors;
+  }
+
+  &:hover {
+    @apply scale-110 bg-primary-color text-primary-bg;
+
+    .primary-text {
+      @apply text-primary-bg;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .skills-container {
+    .row {
+      @apply max-w-full;
+    }
+
+    @apply p-0;
+  }
+
+  .skills-bg::before {
+    content: "";
+
+    background-image: url(/img/skills-bg.svg);
+  }
+}

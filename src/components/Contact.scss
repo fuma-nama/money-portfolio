@@ -1,0 +1,33 @@
+.contact {
+  @apply mt-20 relative py-10;
+
+  > * {
+    @apply relative;
+  }
+
+  &:before {
+    content: "";
+
+    @apply absolute top-0 left-0 w-full h-3/4 bg-gradient-to-r from-primary-color to-purple-900;
+  }
+}
+
+.contact-container {
+  @apply bg-white text-black rounded-xl p-5 gap-4;
+
+  button {
+    @apply py-3;
+  }
+}
+
+.contact-icon {
+  @apply h-full;
+}
+
+.community {
+  @apply p-0 mt-10;
+}
+
+.widget {
+  @apply w-full h-52;
+}

@@ -1,0 +1,9 @@
+.footer {
+  background-image: linear-gradient(
+      to right top,
+      transparent,
+      var(--primary-bg) 70%
+    ),
+    url(/img/banner.svg);
+  @apply py-16 max-w-none bg-cover;
+}
