@@ -15,7 +15,11 @@
 }
 
 .skill-item {
-  @apply flex flex-col text-center rounded-xl;
+  @apply flex flex-col text-center rounded-xl p-5 justify-center;
+
+  * {
+    @apply m-0;
+  }
 }
 
 @media (max-width: 1200px) {

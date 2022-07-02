@@ -9,29 +9,39 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import UrlBar from "./components/UrlBar";
-import { AnimationOnScroll } from "react-animation-on-scroll";
+import { motion } from "framer-motion";
 
 function App() {
   return (
-    <div>
+    <>
       <AppNav />
-      <AnimationOnScroll animateIn="animate__fadeIn" initiallyVisible>
-        <Introduce />
-      </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__fadeInUp">
+      <Introduce />
+      <Animated>
         <Skills />
-      </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__fadeInUp">
+      </Animated>
+      <Animated>
         <Languages />
-      </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__fadeIn">
+      </Animated>
+      <Animated>
         <Projects />
-      </AnimationOnScroll>
-      <AnimationOnScroll animateIn="animate__bounceIn">
+      </Animated>
+      <Animated>
         <Contact />
-      </AnimationOnScroll>
+      </Animated>
       <Footer />
-    </div>
+    </>
+  );
+}
+
+function Animated({ children }) {
+  return (
+    <motion.div
+      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: "10rem" }}
+      transition={{ duration: 1, type: "keyframes" }}
+    >
+      {children}
+    </motion.div>
   );
 }
 
